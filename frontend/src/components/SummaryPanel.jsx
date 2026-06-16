@@ -66,9 +66,6 @@ export default function SummaryPanel({
               📊 {wordCount.toLocaleString('bn-BD')} শব্দ
             </div>
           )}
-          <div className="summary-stat">
-            🤖 BanglaT5 + GPT-4o-mini
-          </div>
         </div>
       </div>
 
@@ -88,7 +85,7 @@ export default function SummaryPanel({
                 transition: 'all 150ms',
               }}
             >
-              ✨ পরিমার্জিত
+              ✨ refined
             </button>
             <button
               onClick={() => setShowDraft(true)}
@@ -101,13 +98,13 @@ export default function SummaryPanel({
                 transition: 'all 150ms',
               }}
             >
-              🔬 BanglaT5 খসড়া
+              🔬 BanglaSum
             </button>
           </div>
         )}
 
         <div className="summary-section-label">
-          {showDraft ? '🔬 BanglaT5 খসড়া সারসংক্ষেপ' : '✨ পরিমার্জিত সারসংক্ষেপ'}
+          {showDraft ? '🔬 BanglaSum' : '✨ refined'}
         </div>
 
         <div className="summary-text bangla" id="summary-text">

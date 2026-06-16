@@ -92,13 +92,13 @@ export default function App() {
       } catch (_) {}
 
       const gptNote = result.gpt_refined
-        ? 'GPT-4o-mini দিয়ে পরিমার্জিত'
-        : '⚠️ API key নেই — BanglaT5 খসড়া দেখানো হচ্ছে'
+        ? 'পরিমার্জিত'
+        : '⚠️ API key নেই — BanglaSum খসড়া দেখানো হচ্ছে'
 
       replaceLastBot(
         `✅ **"${fname}"** বিশ্লেষণ সম্পন্ন!\n\n` +
         `📊 **শব্দ সংখ্যা:** ${result.word_count.toLocaleString('bn-BD')}\n` +
-        `🤖 **পদ্ধতি:** BanglaT5 → ${gptNote}\n\n` +
+        `🤖 **পদ্ধতি:** ${gptNote}\n\n` +
         `ডানদিকের প্যানেলে সারসংক্ষেপ দেখুন। এখন এই নথি সম্পর্কে যেকোনো প্রশ্ন করুন! 💬`,
         { loading: false }
       )
@@ -145,13 +145,13 @@ export default function App() {
         } catch (_) {}
 
         const gptNote = result.gpt_refined
-          ? 'GPT-4o-mini দিয়ে পরিমার্জিত'
-          : '⚠️ API key নেই — BanglaT5 খসড়া দেখানো হচ্ছে'
+          ? 'পরিমার্জিত'
+          : '⚠️ API key নেই — BanglaSum খসড়া দেখানো হচ্ছে'
 
         replaceLastBot(
           `✅ **সারসংক্ষেপ সম্পন্ন!**\n\n` +
           `📊 **শব্দ সংখ্যা:** ${result.word_count.toLocaleString('bn-BD')}\n` +
-          `🤖 **পদ্ধতি:** BanglaT5 → ${gptNote}\n\n` +
+          `🤖 **পদ্ধতি:** ${gptNote}\n\n` +
           `ডানদিকের প্যানেলে সারসংক্ষেপ দেখুন। এখন এই লেখা সম্পর্কে যেকোনো প্রশ্ন করুন! 💬`,
           { loading: false }
         )

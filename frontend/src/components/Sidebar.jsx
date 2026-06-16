@@ -85,10 +85,7 @@ export default function Sidebar({ sessions, hasDocument, documentName, onNewChat
 
       {/* Footer info */}
       <div className="sidebar-footer">
-        <div className="sidebar-footer-info">
-          🤖 BanglaT5 · Whisper ASR · GPT-4o-mini
-        </div>
-        <div className="sidebar-footer-info" style={{ marginTop: 4, fontSize: 10 }}>
+        <div className="sidebar-footer-info" style={{ fontSize: 10 }}>
           বাংলা ভাষার জন্য তৈরি AI সহকারী
         </div>
       </div>

@@ -219,7 +219,7 @@ export default function InputBar({ isLoading, hasDocument, onSendText, onFileSel
 
         <p className="input-hint">
           {hasDocument
-            ? 'নথির প্রসঙ্গে উত্তর দেওয়া হবে · BanglaT5 + GPT-4o-mini'
+            ? 'নথির প্রসঙ্গে উত্তর দেওয়া হবে'
             : 'PDF আপলোড করুন অথবা সরাসরি বাংলায় প্রশ্ন করুন'}
         </p>
       </div>
