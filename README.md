@@ -4,12 +4,11 @@ emoji: 🇧🇩
 colorFrom: orange
 colorTo: red
 sdk: docker
-pinned: false
 app_port: 7860
+pinned: false
 ---
 
 # BanglaSumQA 🇧🇩
-
 
 **বাংলা AI সারসংক্ষেপ ও প্রশ্নোত্তর সহকারী**
 *Bangla AI Summarization & Question Answering*
@@ -109,52 +108,13 @@ User Input
 │
 ├── Voice Input ─→ Whisper ASR (Bangla) ──→ Text in Input Field
 │
-└── Question ────→ GPT-4o-mini (Context + Summary + History) ──→ Answer
+└── Text Input ──→ BanglaT5 (Draft) ──→ GPT-4o-mini (Refine) ──→ Summary
+                                                    │
+                                    Multi-turn QA Chat ←── User Questions
 ```
 
----
-
-## ফোল্ডার কাঠামো
-
-```
-BanglaSumQA/
-├── backend/
-│   ├── app.py                  # FastAPI main
-│   ├── requirements.txt
-│   ├── .env                    # API keys (gitignored)
-│   └── modules/
-│       ├── pdf_extractor.py    # PyMuPDF
-│       ├── summarizer.py       # BanglaT5 + chunking
-│       ├── asr_engine.py       # Whisper ASR
-│       └── llm_qa.py           # GPT-4o-mini
-└── frontend/
-    ├── src/
-    │   ├── App.jsx             # Root state management
-    │   ├── index.css           # Design system
-    │   ├── components/
-    │   │   ├── Sidebar.jsx
-    │   │   ├── ChatWindow.jsx
-    │   │   ├── MessageBubble.jsx
-    │   │   ├── InputBar.jsx
-    │   │   └── SummaryPanel.jsx
-    │   └── services/api.js     # Axios API client
-    └── vite.config.js
-```
-
----
-
-## API Endpoints
-
-| Method | Endpoint | বিবরণ |
-|--------|----------|-------|
-| GET | `/api/health` | সার্ভার স্বাস্থ্য পরীক্ষা |
-| POST | `/api/summarize` | PDF/text সারসংক্ষেপ |
-| POST | `/api/chat` | প্রশ্নোত্তর QA |
-| POST | `/api/transcribe` | অডিও → বাংলা টেক্সট |
-
-API Docs: `http://localhost:8000/docs`
-Live at Hugging Face
 ---
 
 ## লাইসেন্স
-MIT License
+
+MIT License — দেখুন [LICENSE](LICENSE) ফাইল।
