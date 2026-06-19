@@ -1,4 +1,15 @@
+---
+title: BanglaSumQA
+emoji: 🇧🇩
+colorFrom: orange
+colorTo: red
+sdk: docker
+pinned: false
+app_port: 7860
+---
+
 # BanglaSumQA 🇧🇩
+
 
 **বাংলা AI সারসংক্ষেপ ও প্রশ্নোত্তর সহকারী**
 *Bangla AI Summarization & Question Answering*
