@@ -194,6 +194,16 @@ async def transcribe(audio: UploadFile = File(...)):
 
 
 # ---------------------------------------------------------------------------
+# Serve Frontend Static Files (for deployment on HF/Docker)
+# ---------------------------------------------------------------------------
+from fastapi.staticfiles import StaticFiles
+
+frontend_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "frontend", "dist")
+if os.path.exists(frontend_dir):
+    app.mount("/", StaticFiles(directory=frontend_dir, html=True), name="frontend")
+
+
+# ---------------------------------------------------------------------------
 # Run directly
 # ---------------------------------------------------------------------------
 
@@ -202,3 +212,4 @@ if __name__ == "__main__":
     host = os.getenv("HOST", "0.0.0.0")
     port = int(os.getenv("PORT", 8000))
     uvicorn.run("app:app", host=host, port=port, reload=True)
+
