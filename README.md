@@ -142,7 +142,7 @@ BanglaSumQA/
 | POST | `/api/transcribe` | অডিও → বাংলা টেক্সট |
 
 API Docs: `http://localhost:8000/docs`
-
+Live at Hugging Face
 ---
 
 ## লাইসেন্স
